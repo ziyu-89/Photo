@@ -15,8 +15,9 @@ class ViewController: UIViewController {
         ChangImage()
     }
 
-    //Swipe變更畫面
+    //Swipe
     @IBAction func changePage(_ sender: UISwipeGestureRecognizer) {
+        //向左翻頁
         if sender.direction == .left {
             number += 1
             if number < 3{
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
                 ChangImage()
             }
         }
+        //向右翻頁
         else if sender.direction == .right {
             number -= 1
             if number == -1 {
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     //segmentedControl
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
         number = sender.selectedSegmentIndex
