@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     //Swipe
     @IBAction func changePage(_ sender: UISwipeGestureRecognizer) {
-        //向左翻頁
+        
         if sender.direction == .left {
             number += 1
             if number < 3{
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
                 ChangImage()
             }
         }
-        //向右翻頁
+        
         else if sender.direction == .right {
             number -= 1
             if number == -1 {
